@@ -7,6 +7,17 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
+
+  <!-- adding favicon link tags to the head -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="images/favicons/site.webmanifest">
+  <!--for some reason, the below breaks the code highlighting in codeblocks-->
+  <!-- <meta name="msapplication-TileColor" content="#da532c">  -->
+  <meta name="theme-color" content="#ffffff">
+  <!-- end favicons -->
+  
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
@@ -139,7 +150,7 @@
     {% include "partial/og.html" %}
   {% endblock %}
 
-  <title>{{ SITENAME }}{% block title %}{% endblock %}</title>
+  <title>{% block title %}{% endblock %}{{ SITENAME }}</title>
 
   {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.page_level_ads %}
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

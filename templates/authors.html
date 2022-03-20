@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %} &ndash; {{ _('Authors') }}{% endblock %}
+<!-- removing em dash, adding pipe -->
+{% block title %}{{ _('Authors') }} | {% endblock %}
 
 {% block content %}
 <article class="single">

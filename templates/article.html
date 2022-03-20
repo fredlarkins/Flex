@@ -15,7 +15,8 @@
 {% include "partial/og_article.html" %}
 {% endblock %}
 
-{% block title %} &ndash; {{ article.title|striptags|escape }}{% endblock %}
+<!-- removing em dash, adding pipe -->
+{% block title %}{{ article.title|striptags|escape }} | {% endblock %}
 
 {% block content %}
 <article class="single">

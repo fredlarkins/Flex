@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %} &ndash; {{ _('Categories') }}{% endblock %}
+<!-- removing em dash, adding pipe -->
+{% block title %}{{ _('Categories') }} | {% endblock %}
 
 {% block content %}
 <article class="single">
